@@ -133,7 +133,7 @@ p <- ggtree(tree, aes(color = group), size = 0.5) %<+% node_data +
 print(p)
 
 #-------------------------------------------------
-#     3 - Creating a tree with alingment
+#     3 - Creating a tree with alignment
 #-------------------------------------------------
 
 msaplot(p, "blaZ_alineado_CODIGOS_2.0.fasta", offset = 1, width = 1.5)+
