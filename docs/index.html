@@ -1,20 +1,330 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Learn about the blaZ Phylogeny Project - Bioinformatics analysis for antibiotic resistance genes"><title>Home | blaZ Phylogeny</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="/_astro/Layout.DO8YspjS.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container"> <div class="header-row"> <a class="brand" href="/" aria-label="blaZ Phylogeny"> <span class="brand-mark" aria-hidden="true"></span> <span>blaZ Phylogeny</span> </a> <nav class="nav nav-desktop" aria-label="Primary"> <a class="nav-link is-active" href="/" aria-current="page"> Home </a><a class="nav-link" href="/about"> Information </a><a class="nav-link" href="/guide"> Workflow </a> </nav> <details class="nav-mobile"> <summary aria-label="Open menu">Menu</summary> <nav class="nav-mobile-panel" aria-label="Mobile"> <a class="nav-link is-active" href="/" aria-current="page"> Home </a><a class="nav-link" href="/about"> Information </a><a class="nav-link" href="/guide"> Workflow </a> </nav> </details> </div> </div> </header> <main id="main" class="main">  <div class="container"> <section class="hero"> <div class="kicker">blaZ phylogeny project</div> <h1>A small, reproducible workspace to build and visualize a blaZ phylogenetic tree</h1> <p class="lead">
-Collect and filter sequences, build an alignment, trim it, infer a tree, and visualize the results.
-        This site is written for non-technical users: clear steps, expected files, and where to find outputs.
-</p> <div class="actions"> <a class="btn btn-primary" href="/guide">Open the workflow</a> <a class="btn btn-secondary" href="/about">Read the information</a> </div> </section> <section class="section"> <h2>What this repository contains</h2> <div class="grid-3" style="margin-top: 1rem;"> <div class="card"> <div class="muted">Scripts and binaries</div> <h3><code>code/</code></h3> <p class="muted">
-The main automation entrypoint is <code>code/aln_trim_tree.py</code> (MUSCLE → ClipKIT → IQ-TREE).
-            There is also <code>Fasta to Excel.py</code> to summarize FASTA headers into an Excel file.
-</p> </div> <div class="card"> <div class="muted">Results</div> <h3><code>iqtree_results/</code></h3> <p class="muted">
-IQ-TREE outputs: tree files (<code>*.treefile</code>), logs (<code>*.log</code>), and run metadata (<code>*.iqtree</code>).
-</p> </div> <div class="card"> <div class="muted">Visualization</div> <h3><code>R_blaZ_tree/</code></h3> <p class="muted">
-R scripts to render and annotate the tree using <code>ggtree</code>.
-            Tip groups can be defined and colored for interpretation.
-</p> </div> </div> </section> <section class="section"> <h2>Pipeline summary (README)</h2> <div class="callout" style="margin-top: 1rem;"> <div class="prose"> <p> <code>code/aln_trim_tree.py</code> runs three external tools in order:
-<strong>MUSCLE</strong> (alignment) → <strong>ClipKIT</strong> (trimming) → <strong>IQ-TREE</strong> (tree inference).
-</p> <h3>Requirements</h3> <ul> <li>Python 3</li> <li>MUSCLE v5 executable (this repo includes <code>code/muscle-win64.v5.3.exe</code>)</li> <li>ClipKIT available as <code>clipkit</code> in your PATH (or provide <code>--clipkit-exe</code>)</li> <li>IQ-TREE 2 executable (this repo expects <code>code/bin/iqtree2.exe</code> by default)</li> </ul> <h3>What it creates</h3> <ul> <li><code>&lt;input&gt;_aligned.fasta</code></li> <li><code>&lt;input&gt;_aligned_trimmed.fasta</code></li> <li>IQ-TREE outputs under <code>iqtree_results/&lt;input_basename&gt;.*</code></li> </ul> <p>
-Start with <a href="/guide">Workflow</a> to install requirements and run the pipeline end-to-end.
-</p> </div> </div> </section> </div>  </main> <footer class="footer"> <div class="container"> <div class="footer-grid"> <div> <strong>About</strong> <p class="muted" style="margin-top: 0.5rem;">
-A small, beginner-friendly site for the blaZ phylogeny workflow: align sequences, trim noisy columns, infer a tree.
-</p> </div> <div> <strong>Tools</strong> <ul style="margin-top: 0.5rem; padding-left: 1.25rem;" class="muted"> <li>MUSCLE</li> <li>ClipKIT</li> <li>IQ-TREE</li> </ul> </div> <div> <strong>Files You Get</strong> <ul style="margin-top: 0.5rem; padding-left: 1.25rem;" class="muted"> <li>`*_aligned.fasta`</li> <li>`*_aligned_trimmed.fasta`</li> <li>`iqtree_results/`</li> </ul> </div> </div> <p class="muted" style="margin-top: 1.5rem; font-size: 0.95rem;">
-© 2026 blaZ Phylogeny Project
-</p> </div> </footer> </body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBD Documentación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/><path d="M3 19c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+        <span data-i18n="nav.logo">NBD</span> <span data-i18n="nav.documentation">Documentación</span>
+    </div>
+        <div class="language-selector">
+            <select id="languageSelect">
+                <option value="es">Español</option>
+                <option value="ca">Català</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro">
+            <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <span class="theme-text" data-i18n="theme.dark">Modo oscuro</span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#objective" data-i18n="nav.objective">Objetivo</a></li>
+            <li><a href="#pipeline" data-i18n="nav.pipeline">Pipeline</a></li>
+            <li><a href="#how-it-works" data-i18n="nav.howItWorks">Cómo funciona</a></li>
+            <li><a href="#getting-started" data-i18n="nav.gettingStarted">Inicio rápido</a></li>
+            <li><a href="#concepts" data-i18n="nav.concepts">Conceptos clave</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="#reference" data-i18n="nav.reference">Referencia técnica</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Objective -->
+            <section id="objective">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span data-i18n="objective.title">Objetivo del Proyecto</span></h2>
+                <p data-i18n="objective.description">Este pipeline automatiza el proceso de análisis filogenético para genes de cualquier organismo desde NCBI RefSeq, permitiendo estudios de diversidad genética y evolución.</p>
+
+                <div class="card">
+                    <h4><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg><span data-i18n="objective.whatIsPhylogeny">¿Qué es la filogenia?</span></h4>
+                    <p data-i18n="objective.phylogenyDescription">La filogenia es el estudio de las relaciones evolutivas entre organismos. Los árboles filogenéticos muestran cómo diferentes cepas o especies comparten ancestros comunes, permitiendo entender la evolución y propagación de genes.</p>
+                </div>
+
+                <h3 data-i18n="objective.purpose">¿Para qué sirve?</h3>
+                <ul id="objectivePurposes">
+                    <li>Analizar la diversidad genética de cualquier organismo</li>
+                    <li>Identificar patrones de evolución de genes</li>
+                    <li>Comparar secuencias de genes específicos entre cepas o especies</li>
+                    <li>Generar árboles filogenéticos para publicaciones científicas</li>
+                </ul>
+            </section>
+
+            <!-- Pipeline Overview -->
+            <section id="pipeline">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg><span data-i18n="pipeline.title">Resumen del Pipeline</span></h2>
+                <p data-i18n="pipeline.description">El pipeline consiste en dos pasos consecutivos que transforman datos crudos de NCBI en análisis filogenéticos listos para interpretar.</p>
+
+                <div class="pipeline-flow">
+                    <div class="pipeline-step">
+                        <div class="step-num">1</div>
+                        <h4 data-i18n="pipeline.step1Title">Buscar Genes</h4>
+                        <p data-i18n="pipeline.step1Desc">Descarga secuencias de NCBI RefSeq</p>
+                    </div>
+                    <div class="pipeline-arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-num">2</div>
+                        <h4 data-i18n="pipeline.step2Title">Alinear → Podar → Árbol</h4>
+                        <p data-i18n="pipeline.step2Desc">Construye árbol filogenético</p>
+                    </div>
+                </div>
+
+                <div class="concept-box">
+                    <strong><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg><span data-i18n="pipeline.conceptTitle">Concepto: Pipeline</span></strong>
+                    <p data-i18n="pipeline.conceptDescription">Un pipeline es una serie de programas que se ejecutan en secuencia, donde la salida de cada paso es la entrada del siguiente. Esto automatiza tareas repetitivas y garantiza consistencia en los resultados.</p>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section id="how-it-works">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="howItWorks.title">Cómo Funciona</span></h2>
+
+                <h3 data-i18n="howItWorks.step1Title">Paso 1: Búsqueda y Extracción de Genes</h3>
+                <div class="card">
+                    <h4><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg><span data-i18n="howItWorks.step1Script">refseq.py</span></h4>
+                    <p data-i18n="howItWorks.step1Description">Este script se conecta a la base de datos NCBI RefSeq y:</p>
+                    <ol id="step1Items">
+                        <li>Busca genomas de cualquier organismo usando TaxID o nombre</li>
+                        <li>Extrae secuencias de genes específicos (por nombre de gen o producto)</li>
+                        <li>Guarda los resultados en formato FASTA</li>
+                        <li>Genera un archivo Excel con información de control de calidad</li>
+                    </ol>
+                </div>
+
+                <h3 data-i18n="howItWorks.step2Title">Paso 2: Alineamiento, Poda y Árbol Filogenético</h3>
+                <div class="card">
+                    <h4><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg><span data-i18n="howItWorks.step2Script">aln_trim_tree.py</span></h4>
+                    <p data-i18n="howItWorks.step2Description">Este script procesa las secuencias descargadas:</p>
+                    <ol id="step2Items">
+                        <li><strong>Alinea</strong> las secuencias usando <em>MUSCLE</em> (alineamiento múltiple)</li>
+                        <li><strong>Poda</strong> las regiones problemáticas usando <em>ClipKIT</em></li>
+                        <li><strong>Construye</strong> un árbol filogenético usando <em>IQ-TREE</em></li>
+                    </ol>
+                </div>
+
+                <table class="tools-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="howItWorks.table.tool">Herramienta</th>
+                            <th data-i18n="howItWorks.table.function">Función</th>
+                            <th data-i18n="howItWorks.table.input">Entrada</th>
+                            <th data-i18n="howItWorks.table.output">Salida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>MUSCLE</strong></td>
+                            <td data-i18n="howItWorks.table.muscle.function">Alineamiento múltiple de secuencias</td>
+                            <td data-i18n="howItWorks.table.muscle.input">FASTA (secuencias no alineadas)</td>
+                            <td data-i18n="howItWorks.table.muscle.output">FASTA (alineado)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ClipKIT</strong></td>
+                            <td data-i18n="howItWorks.table.clipkit.function">Poda de alineamientos</td>
+                            <td data-i18n="howItWorks.table.clipkit.input">FASTA alineado</td>
+                            <td data-i18n="howItWorks.table.clipkit.output">FASTA podado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IQ-TREE</strong></td>
+                            <td data-i18n="howItWorks.table.iqtree.function">Construcción de árboles filogenéticos</td>
+                            <td data-i18n="howItWorks.table.iqtree.input">FASTA podado</td>
+                            <td data-i18n="howItWorks.table.iqtree.output">Árbol (.treefile), estadísticas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Getting Started -->
+            <section id="getting-started">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg><span data-i18n="gettingStarted.title">Inicio Rápido</span></h2>
+                <p data-i18n="gettingStarted.description">Sigue estos pasos para ejecutar el pipeline en tu computadora.</p>
+
+                <div class="start-steps">
+                    <div class="start-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4 data-i18n="gettingStarted.step1Title">Configurar el entorno</h4>
+                            <pre><code data-i18n="gettingStarted.step1Code"># Linux/Mac
+bash ./setting.sh
+
+# Windows
+powershell -ExecutionPolicy Bypass -File .\setting.ps1</code></pre>
+                            <p data-i18n="gettingStarted.step1Desc">Esto crea un entorno virtual de Python e instala las dependencias necesarias.</p>
+                        </div>
+                    </div>
+
+                    <div class="start-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4 data-i18n="gettingStarted.step2Title">Ejecutar el pipeline</h4>
+                            <pre><code data-i18n="gettingStarted.step2Code">python run.py</code></pre>
+                            <p data-i18n="gettingStarted.step2Desc">El script te preguntará qué quieres hacer:</p>
+                            <ul id="step2Options">
+                                <li><strong>1</strong> → Solo Paso 1 (descargar genes)</li>
+                                <li><strong>2</strong> → Solo Paso 2 (alinear/árbol)</li>
+                                <li><strong>3</strong> → Ambos pasos seguidos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="start-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4 data-i18n="gettingStarted.step3Title">Proporcionar los datos requeridos</h4>
+                            <p data-i18n="gettingStarted.step3Desc">El pipeline te pedirÃ¡:</p>
+                            <ul id="step3Items">
+                                <li><strong>Email para NCBI</strong> (obligatorio)</li>
+                                <li><strong>Clave API de NCBI</strong> (opcional, pero recomendado)</li>
+                                <li><strong>Nombre del gen</strong> a buscar (ej: <code>16S rRNA</code>, <code>cox1</code>)</li>
+                                <li><strong>TaxID</strong> del organismo a estudiar (ej: <code>9606</code> para <em>Homo sapiens</em>)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="concept-box">
+                    <strong><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg><span data-i18n="gettingStarted.tip.title">Consejo</span></strong>
+                    <p data-i18n="gettingStarted.tip.content">Obtén una clave API de NCBI en <a href="https://www.ncbi.nlm.nih.gov/account/" target="_blank">tu cuenta de NCBI</a>. Es gratuita y permite descargas más rápidas.</p>
+                </div>
+            </section>
+
+            <!-- Key Concepts -->
+            <section id="concepts">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span data-i18n="concepts.title">Conceptos Clave</span></h2>
+                <p data-i18n="concepts.description">Glosario de términos importantes para entender el pipeline y el análisis filogenético.</p>
+
+                <div class="glossary-grid">
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.refSeq.title">RefSeq</h4>
+                        <p data-i18n="concepts.refSeq.description">Base de datos de referencia de NCBI con secuencias curadas y de alta calidad. Es el "estándar oficial" para análisis genéticos.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.fasta.title">FASTA</h4>
+                        <p data-i18n="concepts.fasta.description">Formato de texto para almacenar secuencias de ADN/proteínas. Cada secuencia comienza con una línea de descripción seguida de las letras de la secuencia.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.cds.title">CDS (Coding Sequence)</h4>
+                        <p data-i18n="concepts.cds.description">Secuencia de codificación: la parte del ADN que codifica para una proteína. Contiene la información genética real.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.alignment.title">Alineamiento</h4>
+                        <p data-i18n="concepts.alignment.description">Proceso de organizar secuencias para identificar posiciones homologas (heredadas de un ancestro común). Revela similitudes y diferencias.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.trimming.title">Poda (Trimming)</h4>
+                        <p data-i18n="concepts.trimming.description">Eliminar columnas dudosas o con muchos huecos del alineamiento para mejorar la calidad del árbol filogenético.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.phylogeneticTree.title">Árbol Filogenético</h4>
+                        <p data-i18n="concepts.phylogeneticTree.description">Diagma que muestra las relaciones evolutivas entre secuencias. Los nodos representan ancestros comunes y las ramas muestran divergencia.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.bootstrap.title">Bootstrap</h4>
+                        <p data-i18n="concepts.bootstrap.description">Método estadístico que mide la confianza de cada rama del árbol. Valores altos (>70%) indican ramas fiables.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.entrez.title">Entrez</h4>
+                        <p data-i18n="concepts.entrez.description">Sistema de búsqueda de NCBI que permite acceder programáticamente a sus bases de datos biológicas.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.taxId.title">TaxID</h4>
+                        <p data-i18n="concepts.taxId.description">Identificador numérico único para organismos en NCBI. Por ejemplo, <em>Homo sapiens</em> = 9606.</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4 data-i18n="concepts.homology.title">Homología</h4>
+                        <p data-i18n="concepts.homology.description">Secuencias que descienden de un ancestro común. Puede ser ortología (especies diferentes) o paralogía (mismo genoma).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg><span data-i18n="faq.title">Preguntas Frecuentes</span></h2>
+
+                <div class="accordion" id="faqAccordion">
+                </div>
+            </section>
+
+            <!-- Technical Reference -->
+            <section id="reference">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg><span data-i18n="reference.title">Referencia Técnica</span></h2>
+
+                <h3 data-i18n="reference.structureTitle">Estructura del Proyecto</h3>
+                <pre><code data-i18n="reference.structure"> ncbi-beginner-downloader/
+├── run.py                          # Punto de entrada del pipeline
+├── setting.sh / setting.ps1       # Scripts de configuración
+├── requirements.txt                # Dependencias de Python
+├── 1 SEARCH GENES/
+│   └── refseq.py                   # Paso 1: Descarga de NCBI
+└── 2 ALN_TRIM_TREE/
+    ├── aln_trim_tree.py            # Paso 2: Alineamiento y árbol
+    ├── muscle-win64.v5.3.exe       # MUSCLE para Windows
+    └── bin/iqtree2.exe             # IQ-TREE para Windows</code></pre>
+
+                <h3 data-i18n="reference.dependenciesTitle">Dependencias</h3>
+                <ul id="dependenciesList">
+                    <li><strong>Python 3.12+</strong> - Intérprete</li>
+                    <li><strong>Biopython</strong> - Manipulación de secuencias biológicas</li>
+                    <li><strong>OpenPyXL</strong> - Generación de archivos Excel</li>
+                    <li><strong>Certifi</strong> - Certificados SSL para NCBI</li>
+                    <li><strong>ClipKIT</strong> - Poda de alineamientos</li>
+                </ul>
+
+                <h3 data-i18n="reference.externalToolsTitle">Herramientas Externas</h3>
+                <ul id="externalToolsList">
+                    <li><strong>MUSCLE</strong> - Alinear secuencias (instalar con <code>sudo apt install muscle</code> en Linux)</li>
+                    <li><strong>IQ-TREE</strong> - Construir árboles (instalar con <code>sudo apt install iqtree</code> en Linux)</li>
+                </ul>
+
+                <h3 data-i18n="reference.cliArgsTitle">Argumentos de Línea de Comandos</h3>
+                <div class="card">
+                    <h4 data-i18n="reference.cliScript">aln_trim_tree.py</h4>
+                    <pre><code data-i18n="reference.cliExample">python aln_trim_tree.py --input input.fasta [opciones]
+
+--input FILE         Archivo FASTA de entrada (requerido)
+--aligned FILE      Archivo de salida alineado (opcional)
+--trimmed FILE      Archivo de salida podado (opcional)
+--clipkit-mode MODE Modo de poda: smart-gap, gappy, kpic (default: smart-gap)
+--outgroup NAME     Nombre del outgroup para el árbol (opcional)</code></pre>
+                </div>
+
+                <h3 data-i18n="reference.outputFormatsTitle">Formatos de Salida</h3>
+                <div class="card">
+                    <h4 data-i18n="reference.step1OutputTitle">Paso 1 - Archivos generados:</h4>
+                    <ul id="step1Outputs">
+                        <li><code>.fasta</code> - Secuencias extraídas</li>
+                        <li><code>_code.fasta</code> - Versión con códigos (si se solicita)</li>
+                        <li><code>.xlsx</code> - Control de calidad en Excel</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 data-i18n="reference.step2OutputTitle">Paso 2 - Archivos generados:</h4>
+                    <ul id="step2Outputs">
+                        <li><code>_aligned.fasta</code> - Secuencias alineadas</li>
+                        <li><code>_aligned_trimmed.fasta</code> - Alineamiento podado</li>
+                        <li><code>iqtree_results/</code> - Directorio con:</li>
+                        <ul>
+                            <li><code>.treefile</code> - Árbol filogenético (formato Newick)</li>
+                            <li><code>.iqtree</code> - Archivo con estadísticas</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p data-i18n="footer.text">NCBI Beginner Downloader (NBD) - Proyecto de Grado</p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
