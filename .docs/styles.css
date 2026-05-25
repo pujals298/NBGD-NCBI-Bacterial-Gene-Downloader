@@ -15,7 +15,7 @@
     --code-text: #c4b5fd;
     --border: #e5e7eb;
     --shadow: rgba(124, 58, 237, 0.12);
-    --nav-width: 260px;
+    --nav-width: 290px;
     --max-width: 900px;
     --sidebar-bg: linear-gradient(180deg, #5b21b6 0%, #7c3aed 100%);
 }
@@ -145,6 +145,42 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+/* Manuscript Button */
+.manuscript-button {
+    display: block;
+    width: 100%;
+    margin: -8px 0 16px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 650;
+    font-size: 0.92rem;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+        0 0 0 1px rgba(196, 181, 253, 0.14),
+        0 0 18px rgba(196, 181, 253, 0.10);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.manuscript-button:hover {
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow:
+        0 0 0 1px rgba(196, 181, 253, 0.22),
+        0 0 22px rgba(196, 181, 253, 0.14);
+    transform: translateY(-1px);
+}
+
+.manuscript-button:focus-visible {
+    outline: none;
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.28),
+        0 0 0 4px rgba(196, 181, 253, 0.22),
+        0 0 22px rgba(196, 181, 253, 0.14);
 }
 
 .sidebar-logo [data-lucide] {
@@ -457,6 +493,45 @@ pre code {
     font-size: 0.95rem;
 }
 
+.accordion-body p,
+.accordion-body li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Workflow images */
+.workflow-figure {
+    margin-top: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 18px var(--shadow);
+    background: var(--bg);
+}
+
+.workflow-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tools table intro */
+.tools-intro {
+    color: var(--text-light);
+    margin: 10px 0 14px;
+}
+
+/* Inline links */
+.inline-link {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.inline-link:hover {
+    color: var(--primary-dark);
+}
+
 /* Getting Started */
 .start-steps {
     counter-reset: step;
@@ -516,6 +591,8 @@ pre code {
 .glossary-item p {
     font-size: 0.9rem;
     margin: 0;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Tools Table */

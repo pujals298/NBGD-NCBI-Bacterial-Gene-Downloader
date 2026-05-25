@@ -4,6 +4,7 @@
 
 let translations = {};
 let currentLang = 'es';
+let accordionsBound = false;
 
 document.addEventListener('DOMContentLoaded', function() {
     initLanguage();
@@ -35,15 +36,30 @@ function applyTranslations() {
         }
     });
 
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        const value = getNestedValue(t, key);
+        if (value) {
+            el.innerHTML = value;
+        }
+    });
+
     document.getElementById('objectivePurposes').innerHTML = t.objective?.purposeItems?.map(item => `<li>${item}</li>`).join('') || '';
     document.getElementById('step1Items').innerHTML = t.howItWorks?.step1Items?.map(item => `<li>${item}</li>`).join('') || '';
     document.getElementById('step2Items').innerHTML = t.howItWorks?.step2Items?.map(item => `<li>${item}</li>`).join('') || '';
-    document.getElementById('step2Options').innerHTML = t.gettingStarted?.step2Options?.map(item => `<li>${item}</li>`).join('') || '';
-    document.getElementById('step3Items').innerHTML = t.gettingStarted?.step3Items?.map(item => `<li>${item}</li>`).join('') || '';
+    const terminalMethods = document.getElementById('terminalMethods');
+    if (terminalMethods) terminalMethods.innerHTML = t.gettingStarted?.terminalMethods?.map(item => `<li>${item}</li>`).join('') || '';
+
+    const setupWhatItDoes = document.getElementById('setupWhatItDoes');
+    if (setupWhatItDoes) setupWhatItDoes.innerHTML = t.gettingStarted?.setupWhatItDoes?.map(item => `<li>${item}</li>`).join('') || '';
+
+    const afterSetupOptions = document.getElementById('afterSetupOptions');
+    if (afterSetupOptions) afterSetupOptions.innerHTML = t.gettingStarted?.afterSetupOptions?.map(item => `<li>${item}</li>`).join('') || '';
     document.getElementById('dependenciesList').innerHTML = t.reference?.dependencies?.map(item => `<li>${item}</li>`).join('') || '';
     document.getElementById('externalToolsList').innerHTML = t.reference?.externalTools?.map(item => `<li>${item}</li>`).join('') || '';
-    document.getElementById('step1Outputs').innerHTML = t.reference?.step1Outputs?.map(item => `<li>${item}</li>`).join('') || '';
-    document.getElementById('step2Outputs').innerHTML = t.reference?.step2Outputs?.map(item => `<li>${item}</li>`).join('') || '';
+
+    const troubleshootingItems = document.getElementById('troubleshootingItems');
+    if (troubleshootingItems) troubleshootingItems.innerHTML = t.troubleshooting?.items?.map(item => `<li>${item}</li>`).join('') || '';
 
     const faqContainer = document.getElementById('faqAccordion');
     if (t.faq?.questions) {
@@ -137,10 +153,18 @@ function initNavigation() {
 }
 
 function initAccordions() {
-    document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', function() {
-            this.parentElement.classList.toggle('open');
-        });
+    // Bind once using event delegation.
+    // We re-render FAQ contents on language changes; binding per header would
+    // duplicate listeners and toggle twice (ending up "closed").
+    if (accordionsBound) return;
+    accordionsBound = true;
+
+    document.addEventListener('click', (e) => {
+        const header = e.target.closest('.accordion-header');
+        if (!header) return;
+        const item = header.closest('.accordion-item');
+        if (!item) return;
+        item.classList.toggle('open');
     });
 }
 
