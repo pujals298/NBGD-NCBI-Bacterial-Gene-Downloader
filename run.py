@@ -1,6 +1,7 @@
 import subprocess
 import sys
 from pathlib import Path
+import shlex
 
 STEP1 = Path("1 SEARCH GENES") / "download.py"
 STEP2 = Path("2 ALN_TRIM_TREE") / "aln_trim_tree.py"
@@ -9,10 +10,6 @@ def run(cmd: list[str]) -> None:
     cmd = [str(c) for c in cmd]
     print("\nRunning:", cmd)
     subprocess.run(cmd, check=True)
-
-def ask_optional(prompt: str) -> str | None:
-    val = input(prompt).strip()
-    return val if val else None
 
 def main():
     print("=== Pipeline runner ===")
@@ -36,21 +33,24 @@ def main():
             print(f"Step 2 script not found: {STEP2}")
             return
 
-        fasta = input("\nPath to input FASTA for Step 2: ").strip()
+        fasta = input("\nName of the input FASTA for Step 2: ").strip()
         if not fasta:
             print("No FASTA provided.")
             return
 
-        # Collect optional Step 2 settings
-        clipkit_mode = ask_optional("ClipKIT mode (Optional) [default smart-gap]: ")
-        outgroup = ask_optional("Outgroup taxon name (Optional) [default the first one]: ")
+        print("\n(Optional) Advanced Step 2 arguments:")
+        print("  Examples:")
+        print("    --clipkit-mode X --outgroup X -muscle-exe /path/to/muscle")
+        print("  Leave blank to use defaults.")
+        print("  (Tip: type -h to see all Step 2 options.)") 
+        extra = input("Extra args: ").strip()
+        extra_args = shlex.split(extra) if extra else []
 
-        cmd = [sys.executable, STEP2, "--input", fasta]
-        if clipkit_mode:
-            cmd += ["--clipkit-mode", clipkit_mode]
-        if outgroup:
-            cmd += ["--outgroup", outgroup]
+        if extra_args in (["-h"], ["--help"]):
+            run([sys.executable, STEP2, *extra_args])
+            return
 
+        cmd = [sys.executable, STEP2, "--input", fasta, *extra_args]
         run(cmd)
 
     print("\nDone.")

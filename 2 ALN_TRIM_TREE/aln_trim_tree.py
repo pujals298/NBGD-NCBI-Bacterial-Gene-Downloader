@@ -44,8 +44,6 @@ def main():
                         help="ClipKIT trimming mode (default: smart-gap)")
     parser.add_argument("--muscle-exe", default=None,
                         help="Path to MUSCLE executable, or leave blank to auto-discover")
-    parser.add_argument("--clipkit-exe", default="clipkit",
-                        help="Path to ClipKIT executable (default: clipkit in current Python)")
     parser.add_argument("--iqtree-exe", default=None,
                         help="Path to IQ-TREE executable, or leave blank to auto-discover")
     parser.add_argument("--outgroup", default=None,
