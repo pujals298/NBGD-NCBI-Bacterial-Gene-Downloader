@@ -1,8 +1,8 @@
 # NBGD — NCBI Bacterial Gene Downloader
 
-**NCBI Bacterial Gene Downloader** is a begginer pipeline that will help you to:
+**NCBI Bacterial Gene Downloader** is a begginner pipeline that will help you to:
 
-**1)** Download gene (or gene product) sequences from NCBI's RefSeq database for a given organism.
+**1)** Download gene (or gene product) sequences from NCBI's RefSeq database for a given prokaryotic organism.
 
 **2)** Generate a phylogenetic tree from those sequences.
 
@@ -16,6 +16,7 @@ NBGD-NCBI-Bacterial-Gene-Downloader/
 ├── setup.sh               # Setup for Linux/macOS (creates .venv, installs deps, installs tools, runs run.py)
 ├── setup.ps1              # Setup for Windows (creates .venv, installs deps, runs run.py)
 ├── requirements.txt       # Python dependencies
+├── command.txt            # The exact command you need to copy and paste in your terminal
 ├── 1 SEARCH GENES/        # Step 1 script (download/extract sequences from NCBI)
 └── 2 ALN_TRIM_TREE/       # Step 2 script (align/trim/tree)
 ```
@@ -36,7 +37,7 @@ You need **Python 3** installed (recommended: a Python that is still supported, 
 The pipeline downloads data from NCBI, so you must be online.
 
 ### 3) An NCBI email (required) + API key (optional but recommended)
-NCBI asks users of automated tools to provide an email address realated to their account.
+NCBI asks users of automated tools to provide an email address related to their account.
 
 - **Email is required**
 - **API key is optional**, but recommended because it allows faster downloads. You can create a new one for free in your NCBI 'account settings'
@@ -48,7 +49,7 @@ NCBI asks users of automated tools to provide an email address realated to their
 1. Download / clone this repository to your computer
 2. Open **PowerShell** in the project folder either by:
 * Right click on the folder and select "Open on Terminal"
-* Left click on the adress bar and write: "cmd"
+* Left click on the address bar and write: "cmd"
 3. Once on the terminal, copy, paste and run this command:
 
 ```powershell
@@ -64,7 +65,7 @@ bash ./setup.sh
 ```
 
 ---
-*These commands will be available on the 'requirements.txt' file on the project directory*
+*These commands will be available on the 'command.txt' file on the project directory*
 
 ## What these commands do for you:
 - Create a local Python environment in a folder called **`.venv`**
@@ -79,7 +80,7 @@ After setup finishes, you will see a simple menu appear on the terminal. You wil
 - Step 2 only (align/trim/tree) = **2** 
 - Step 1 + Step 2 (full pipeline) = **3**
 
-Depending on which one you chose,the script will then prompt you about important information related to your search, such as:
+Depending on which one you chose, the script will then prompt you about important information related to your search, such as:
 - Your NCBI e-mail and API, the gene name, or the TaxID of your organism.
 - The name of the file you wish to align
 
