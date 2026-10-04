@@ -13,6 +13,7 @@ const i18n = {
             objective: "Objetivo",
             howItWorks: "Cómo funciona",
             gettingStarted: "Cómo iniciar la Pipeline",
+            example: "Ejemplo",
             concepts: "Conceptos clave",
             faq: "FAQ",
             reference: "Referencia técnica",
@@ -124,6 +125,17 @@ const i18n = {
             trimming: { title: "Recorte (Trimming)", description: "Eliminar columnas dudosas o con muchos huecos del alineamiento para mejorar la calidad del árbol filogenético." },
             phylogeneticTree: { title: "Árbol Filogenético", description: "Diagrama que muestra las relaciones evolutivas entre secuencias. Los nodos representan ancestros comunes y las ramas muestran divergencia." },
         },
+        example: {
+            title: "Ejemplo: gen 16S en Staphylococcus",
+            intro: "Para demostrar el funcionamiento de la pipeline y comprobar sus resultados, se realizó una prueba con el gen del ARNr 16S en el género <em>Staphylococcus</em> (TaxID: 1279). El 16S es un marcador filogenético muy utilizado en la taxonomía procariota y el género está muy estudiado, por lo que el resultado se puede comparar con filogenias publicadas.",
+            stepsTitle: "Qué se hizo",
+            step1: "<strong>Paso 1:</strong> La búsqueda abarcó 200 ensamblados de RefSeq de <em>Staphylococcus</em>, con un máximo de 400 secuencias de salida, para tener un conjunto de datos suficiente para la inferencia filogenética limitando la redundancia y el coste computacional. El script recuperó 400 secuencias de ARNr 16S de 8 especies distintas.",
+            step2: "<strong>Paso 2:</strong> Las secuencias codificadas se alinearon (MUSCLE), se recortaron (ClipKIT) y se usaron para inferir el árbol filogenético (IQ-TREE).",
+            step3: "<strong>Visualización:</strong> NBGD no dibuja árboles. El archivo <code>*.treefile</code> resultante (formato Newick estándar) se representó con <a href='https://itol.embl.de/' target='_blank' rel='noopener'>iTOL</a>, una herramienta web externa.",
+            resultTitle: "Resultado",
+            result: "El programa distribuyó las 8 especies (<em>S. aureus</em>, <em>S. epidermidis</em>, <em>S. capitis</em>, <em>S. pettenkoferi</em>, <em>S. hominis</em>, <em>S. haemolyticus</em>, <em>S. lugdunensis</em> y <em>S. warneri</em>) en clados distintos, de forma consistente con filogenias del género publicadas anteriormente. El tamaño relativo de los clados refleja la representación desigual de las especies en RefSeq: <em>S. aureus</em> y <em>S. epidermidis</em> forman los clados más grandes, como cabía esperar por su relevancia clínica y su mayor secuenciación. Esto demuestra que la pipeline es capaz de recuperar, alinear e inferir una filogenia biológicamente coherente a partir de datos de RefSeq de forma automatizada y reproducible. Más detalles en el <a href='NBDG.PDF' target='_blank' rel='noopener'>manuscrito del TFG</a>.",
+            figureCaption: "Árbol filogenético de las secuencias de ARNr 16S de Staphylococcus, visualizado con iTOL."
+        },
         faq: {
             title: "Preguntas Frecuentes",
             questions: [
@@ -166,6 +178,7 @@ const i18n = {
             objective: "Objective",
             howItWorks: "How it works",
             gettingStarted: "How to start",
+            example: "Example",
             concepts: "Key concepts",
             faq: "FAQ",
             reference: "Technical reference",
@@ -273,6 +286,17 @@ const i18n = {
             trimming: { title: "Trimming", description: "Removing low-quality columns from the alignment to better the quality of the final phylogenetic tree." },
             phylogeneticTree: { title: "Phylogenetic Tree", description: "Diagram that show evolutionary relationships between sequences. The nodes represent common ancestors and the branches represent divergences." },
         },
+        example: {
+            title: "Example: 16S gene in Staphylococcus",
+            intro: "To demonstrate how the pipeline works and to check its outputs, a test case was run using the 16S rRNA gene across the genus <em>Staphylococcus</em> (TaxID: 1279). 16S rRNA is a widely used phylogenetic marker in prokaryotic taxonomy, and the genus is well studied, so the result can be compared against published phylogenies.",
+            stepsTitle: "What was done",
+            step1: "<strong>Step 1:</strong> The search covered 200 RefSeq <em>Staphylococcus</em> assemblies, with the output capped at 400 sequences to get a dataset large enough for phylogenetic inference while limiting redundancy and computing time. The script retrieved 400 16S rRNA sequences from 8 different species.",
+            step2: "<strong>Step 2:</strong> The coded sequences were aligned (MUSCLE), trimmed (ClipKIT) and used to infer a tree (IQ-TREE).",
+            step3: "<strong>Visualization:</strong> NBGD does not draw trees. The resulting <code>*.treefile</code> (standard Newick format) was rendered with <a href='https://itol.embl.de/' target='_blank' rel='noopener'>iTOL</a>, an external web tool.",
+            resultTitle: "Result",
+            result: "The tree placed all 8 species (<em>S. aureus</em>, <em>S. epidermidis</em>, <em>S. capitis</em>, <em>S. pettenkoferi</em>, <em>S. hominis</em>, <em>S. haemolyticus</em>, <em>S. lugdunensis</em> and <em>S. warneri</em>) in distinct clades, consistent with previously published phylogenies of the genus. Clade sizes reflect the uneven representation of species in RefSeq: <em>S. aureus</em> and <em>S. epidermidis</em> form the largest clades, as expected given their clinical relevance and higher sequencing prevalence. This shows that the pipeline can retrieve, align and infer a biologically coherent phylogeny from RefSeq data in an automated and reproducible way. Full details are in the <a href='NBDG.PDF' target='_blank' rel='noopener'>thesis manuscript</a>.",
+            figureCaption: "Phylogenetic tree of Staphylococcus 16S rRNA sequences, visualized with iTOL."
+        },
         faq: {
             title: "Frequently Asked Questions",
             questions: [
@@ -314,6 +338,7 @@ const i18n = {
             objective: "Objectiu",
             howItWorks: "Com funciona",
             gettingStarted: "Com iniciar",
+            example: "Exemple",
             concepts: "Conceptes clau",
             faq: "FAQ",
             reference: "Referència tècnica",
@@ -420,6 +445,17 @@ const i18n = {
             alignment: { title: "Alineament", description: "Procés d'organitzar seqüències per identificar posicions homòlogues (hertades d'un ancestre comú). Revela similituds i diferències." },
             trimming: { title: "Poda", description: "Eliminar columnes dubtoses o amb molts espais buits del alineament per a millorar la qualitat de l'arbre filogenètic." },
             phylogeneticTree: { title: "Arbre Filogenètic", description: "Diagrama que mostra les relacions evolutives entre seqüències. Els nodes representen els ancestres comuns y les branques mostren divergències." },
+        },
+        example: {
+            title: "Exemple: gen 16S a Staphylococcus",
+            intro: "Per demostrar el funcionament de la pipeline i comprovar-ne els resultats, es va fer una prova amb el gen de l'ARNr 16S al gènere <em>Staphylococcus</em> (TaxID: 1279). El 16S és un marcador filogenètic molt utilitzat en taxonomia procariota i el gènere està molt estudiat, de manera que el resultat es pot comparar amb filogènies publicades.",
+            stepsTitle: "Què es va fer",
+            step1: "<strong>Pas 1:</strong> La cerca va abastar 200 assemblatges de RefSeq de <em>Staphylococcus</em>, amb un màxim de 400 seqüències de sortida, per disposar d'un conjunt de dades suficient per a la inferència filogenètica limitant la redundància i el cost computacional. L'script va recuperar 400 seqüències d'ARNr 16S de 8 espècies diferents.",
+            step2: "<strong>Pas 2:</strong> Les seqüències codificades es van alinear (MUSCLE), es van podar (ClipKIT) i es van fer servir per inferir l'arbre (IQ-TREE).",
+            step3: "<strong>Visualització:</strong> NBGD no dibuixa arbres. L'arxiu <code>*.treefile</code> resultant (format Newick estàndard) es va representar amb <a href='https://itol.embl.de/' target='_blank' rel='noopener'>iTOL</a>, una eina web externa.",
+            resultTitle: "Resultat",
+            result: "L'arbre va distribuir les 8 espècies (<em>S. aureus</em>, <em>S. epidermidis</em>, <em>S. capitis</em>, <em>S. pettenkoferi</em>, <em>S. hominis</em>, <em>S. haemolyticus</em>, <em>S. lugdunensis</em> i <em>S. warneri</em>) en clades diferents, de manera consistent amb filogènies del gènere publicades anteriorment. La mida relativa dels clades reflecteix la representació desigual de les espècies a RefSeq: <em>S. aureus</em> i <em>S. epidermidis</em> formen els clades més grans, com era d'esperar per la seva rellevància clínica i la seva major seqüenciació. Això demostra que la pipeline és capaç de recuperar, alinear i inferir una filogènia biològicament coherent a partir de dades de RefSeq de manera automatitzada i reproduïble. Més detalls al <a href='NBDG.PDF' target='_blank' rel='noopener'>manuscrit del TFG</a>.",
+            figureCaption: "Arbre filogenètic de les seqüències d'ARNr 16S de Staphylococcus, visualitzat amb iTOL."
         },
         faq: {
             title: "Preguntes Freqüents",

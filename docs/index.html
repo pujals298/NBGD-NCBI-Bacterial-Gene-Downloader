@@ -13,7 +13,7 @@
         <span data-i18n="nav.logo">NBGD</span> <span data-i18n="nav.documentation">Documentación</span>
     </div>
 
-        <a class="manuscript-button" href="NBDG.pdf" target="_blank" rel="noopener" data-i18n="nav.manuscript">Ver manuscrito</a>
+        <a class="manuscript-button" href="NBDG.PDF" target="_blank" rel="noopener" data-i18n="nav.manuscript">Ver manuscrito</a>
 
         <div class="language-selector">
             <select id="languageSelect">
@@ -32,6 +32,7 @@
             <li><a href="#concepts" data-i18n="nav.concepts">Conceptos clave</a></li>
             <li><a href="#how-it-works" data-i18n="nav.howItWorks">Cómo funciona</a></li>
             <li><a href="#getting-started" data-i18n="nav.gettingStarted">Inicio rápido</a></li>
+            <li><a href="#example" data-i18n="nav.example">Ejemplo</a></li>
             <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
             <li><a href="#reference" data-i18n="nav.reference">Referencia técnica</a></li>
             <li><a href="#troubleshooting" data-i18n="nav.troubleshooting">Troubleshooting</a></li>
@@ -240,6 +241,26 @@
                     <strong><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg><span data-i18n="gettingStarted.tip.title">Consejo</span></strong>
                     <p data-i18n="gettingStarted.tip.content">Obtén una clave API de NCBI en <a href="https://www.ncbi.nlm.nih.gov/account/" target="_blank">tu cuenta de NCBI</a>. Es gratuita y permite descargas más rápidas.</p>
                 </div>
+            </section>
+
+            <!-- Example -->
+            <section id="example">
+                <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg><span data-i18n="example.title">Ejemplo: gen 16S en Staphylococcus</span></h2>
+                <p data-i18n-html="example.intro">Para demostrar el funcionamiento de la pipeline y comprobar sus resultados, realicé una prueba con el gen del ARNr 16S en el género <em>Staphylococcus</em> (TaxID: 1279). El 16S es un marcador filogenético muy utilizado en taxonomía procariota y el género está muy estudiado, por lo que el resultado se puede comparar con filogenias publicadas.</p>
+
+                <h3 data-i18n="example.stepsTitle">Qué se hizo</h3>
+                <ul>
+                    <li data-i18n-html="example.step1"><strong>Paso 1:</strong> la búsqueda abarcó 200 ensamblados de RefSeq de <em>Staphylococcus</em>, con un máximo de 400 secuencias de salida, para tener un conjunto de datos suficiente para la inferencia filogenética limitando la redundancia y el coste computacional. El script recuperó 400 secuencias de ARNr 16S de 8 especies distintas, tal como queda registrado en el Excel de QC.</li>
+                    <li data-i18n-html="example.step2"><strong>Paso 2:</strong> las secuencias codificadas se alinearon (MUSCLE), se podaron (ClipKIT) y se usaron para inferir el árbol (IQ-TREE).</li>
+                    <li data-i18n-html="example.step3"><strong>Visualización:</strong> NBGD no dibuja árboles. El archivo <code>.treefile</code> resultante (formato Newick estándar) se representó con <a href='https://itol.embl.de/' target='_blank' rel='noopener'>iTOL</a>, una herramienta web externa.</li>
+                </ul>
+
+                <h3 data-i18n="example.resultTitle">Resultado</h3>
+                <p data-i18n-html="example.result">El árbol distribuyó las 8 especies (<em>S. aureus</em>, <em>S. epidermidis</em>, <em>S. capitis</em>, <em>S. pettenkoferi</em>, <em>S. hominis</em>, <em>S. haemolyticus</em>, <em>S. lugdunensis</em> y <em>S. warneri</em>) en clados distintos, de forma consistente con filogenias del género publicadas anteriormente. El tamaño relativo de los clados refleja la representación desigual de las especies en RefSeq: <em>S. aureus</em> y <em>S. epidermidis</em> forman los clados más grandes, como cabía esperar por su relevancia clínica y su mayor secuenciación. Esto demuestra que la pipeline es capaz de recuperar, alinear e inferir una filogenia biológicamente coherente a partir de datos de RefSeq de forma automatizada y reproducible. Más detalles en el <a href='NBDG.PDF' target='_blank' rel='noopener'>manuscrito del TFG</a>.</p>
+                <figure class="workflow-figure">
+                    <img src="tree16S.png" alt="Árbol filogenético de ARNr 16S de Staphylococcus (iTOL)" loading="lazy">
+                    <figcaption data-i18n="example.figureCaption">Árbol filogenético de las secuencias de ARNr 16S de Staphylococcus, visualizado con iTOL.</figcaption>
+                </figure>
             </section>
 
             <!-- FAQ -->
