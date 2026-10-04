@@ -48,7 +48,7 @@ NCBI asks users of automated tools to provide an email address related to their 
 ### Windows (PowerShell)
 1. Download / clone this repository to your computer
 2. Open **PowerShell** in the project folder either by:
-* Right click on the folder and select "Open on Terminal"
+* Right click on the folder and select "Open in Terminal"
 * Left click on the address bar and write: "cmd"
 3. Once on the terminal, copy, paste and run this command:
 
