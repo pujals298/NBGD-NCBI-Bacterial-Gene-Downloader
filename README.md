@@ -21,7 +21,8 @@ NBGD-NCBI-Bacterial-Gene-Downloader/
 ├── requirements.txt       # Python dependencies
 ├── command.txt            # The exact command you need to copy and paste in your terminal
 ├── 1 SEARCH GENES/        # Step 1 script (download/extract sequences from NCBI)
-└── 2 ALN_TRIM_TREE/       # Step 2 script (align/trim/tree)
+├── 2 ALN_TRIM_TREE/       # Step 2 script (align/trim/tree)
+└── Example/               # Resulting files of a test run using 16S rRNA of Staphylococcus genre
 ```
 
 ---

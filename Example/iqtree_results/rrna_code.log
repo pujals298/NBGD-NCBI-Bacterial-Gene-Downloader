@@ -1,0 +1,909 @@
+IQ-TREE multicore version 2.4.0 for Windows 64-bit built Feb  7 2025
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    Melissa-PC (AVX2, FMA3, 15 GB RAM)
+Command: C:\Users\Uni\Desktop\NBGD\2 ALN_TRIM_TREE\bin\iqtree2.exe -s rrna_code_aligned_trimmed.fasta -m TEST -B 1000 --prefix iqtree_results\rrna_code
+Seed:    384001 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun May 24 13:53:42 2026
+Kernel:  AVX+FMA - 1 threads (12 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 12 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file rrna_code_aligned_trimmed.fasta ... Fasta format detected
+Reading fasta file: done in 0.0091072 secs
+Alignment most likely contains DNA/RNA sequences
+Alignment has 400 sequences with 1555 columns, 123 distinct patterns
+100 parsimony-informative, 21 singleton sites, 1434 constant sites
+        Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.0001136 secs
+   1  RNA313    0.64%    passed     99.53%
+   2  RNA225    0.39%    passed     99.73%
+   3  RNA312    0.45%    passed     99.61%
+   4  RNA30     0.32%    passed     99.95%
+   5  RNA311    0.51%    passed     99.58%
+   6  RNA309    0.39%    passed     99.45%
+   7  RNA157    0.06%    passed     73.43%
+   8  RNA17     0.26%    passed     99.98%
+   9  RNA15     0.26%    passed    100.00%
+  10  RNA164    0.26%    passed    100.00%
+  11  RNA166    0.26%    passed     99.96%
+  12  RNA13     0.26%    passed    100.00%
+  13  RNA14     0.26%    passed    100.00%
+  14  RNA16     0.26%    passed    100.00%
+  15  RNA18     0.26%    passed    100.00%
+  16  RNA162    0.26%    passed    100.00%
+  17  RNA163    0.26%    passed    100.00%
+  18  RNA167    0.26%    passed    100.00%
+  19  RNA165    0.26%    passed     99.99%
+  20  RNA145    0.13%    passed     99.85%
+  21  RNA146    0.13%    passed     99.99%
+  22  RNA147    0.13%    passed     99.99%
+  23  RNA148    0.13%    passed     99.99%
+  24  RNA149    0.13%    passed     99.99%
+  25  RNA150    0.13%    passed     99.99%
+  26  RNA184    0.13%    passed     99.92%
+  27  RNA180    0.13%    passed     99.99%
+  28  RNA181    0.13%    passed     99.99%
+  29  RNA183    0.13%    passed     99.99%
+  30  RNA185    0.13%    passed     99.99%
+  31  RNA182    0.13%    passed     99.99%
+  32  RNA156    0.13%    passed     70.73%
+  33  RNA158    0.13%    passed     70.73%
+  34  RNA159    0.13%    passed     70.73%
+  35  RNA160    0.13%    passed     70.73%
+  36  RNA161    0.13%    passed     70.73%
+  37  RNA211    0.26%    passed     99.91%
+  38  RNA168    0.26%    passed     99.88%
+  39  RNA135    0.26%    passed    100.00%
+  40  RNA23     0.26%    passed     99.92%
+  41  RNA213    0.26%    passed     99.92%
+  42  RNA115    0.26%    passed     99.80%
+  43  RNA28     0.26%    passed    100.00%
+  44  RNA189    0.26%    passed    100.00%
+  45  RNA123    0.26%    passed    100.00%
+  46  RNA141    0.26%    passed    100.00%
+  47  RNA22     0.26%    passed     99.92%
+  48  RNA24     0.26%    passed     99.92%
+  49  RNA49     0.26%    passed     99.92%
+  50  RNA50     0.26%    passed     99.92%
+  51  RNA51     0.26%    passed     99.92%
+  52  RNA52     0.26%    passed     99.92%
+  53  RNA53     0.26%    passed     99.92%
+  54  RNA64     0.26%    passed     99.92%
+  55  RNA85     0.26%    passed     99.92%
+  56  RNA86     0.26%    passed     99.92%
+  57  RNA88     0.26%    passed     99.92%
+  58  RNA89     0.26%    passed     99.92%
+  59  RNA90     0.26%    passed     99.92%
+  60  RNA109    0.26%    passed     99.92%
+  61  RNA110    0.26%    passed     99.92%
+  62  RNA111    0.26%    passed     99.92%
+  63  RNA112    0.26%    passed     99.92%
+  64  RNA113    0.26%    passed     99.92%
+  65  RNA114    0.26%    passed     99.92%
+  66  RNA121    0.26%    passed     99.92%
+  67  RNA122    0.26%    passed     99.92%
+  68  RNA124    0.26%    passed     99.92%
+  69  RNA125    0.26%    passed     99.92%
+  70  RNA126    0.26%    passed     99.92%
+  71  RNA127    0.26%    passed     99.92%
+  72  RNA128    0.26%    passed     99.92%
+  73  RNA129    0.26%    passed     99.92%
+  74  RNA130    0.26%    passed     99.92%
+  75  RNA131    0.26%    passed     99.92%
+  76  RNA133    0.26%    passed     99.92%
+  77  RNA134    0.26%    passed     99.92%
+  78  RNA136    0.26%    passed     99.92%
+  79  RNA137    0.26%    passed     99.92%
+  80  RNA138    0.26%    passed     99.92%
+  81  RNA139    0.26%    passed     99.92%
+  82  RNA140    0.26%    passed     99.92%
+  83  RNA142    0.26%    passed     99.92%
+  84  RNA143    0.26%    passed     99.92%
+  85  RNA144    0.26%    passed     99.92%
+  86  RNA169    0.26%    passed     99.92%
+  87  RNA171    0.26%    passed     99.92%
+  88  RNA172    0.26%    passed     99.92%
+  89  RNA173    0.26%    passed     99.92%
+  90  RNA174    0.26%    passed     99.92%
+  91  RNA175    0.26%    passed     99.92%
+  92  RNA178    0.26%    passed     99.92%
+  93  RNA179    0.26%    passed     99.92%
+  94  RNA193    0.26%    passed     99.92%
+  95  RNA194    0.26%    passed     99.92%
+  96  RNA195    0.26%    passed     99.92%
+  97  RNA196    0.26%    passed     99.92%
+  98  RNA197    0.26%    passed     99.92%
+  99  RNA198    0.26%    passed     99.92%
+ 100  RNA199    0.26%    passed     99.92%
+ 101  RNA201    0.26%    passed     99.92%
+ 102  RNA202    0.26%    passed     99.92%
+ 103  RNA203    0.26%    passed     99.92%
+ 104  RNA204    0.26%    passed     99.92%
+ 105  RNA205    0.26%    passed     99.92%
+ 106  RNA206    0.26%    passed     99.92%
+ 107  RNA207    0.26%    passed     99.92%
+ 108  RNA208    0.26%    passed     99.92%
+ 109  RNA210    0.26%    passed     99.92%
+ 110  RNA212    0.26%    passed     99.92%
+ 111  RNA214    0.26%    passed     99.92%
+ 112  RNA25     0.26%    passed     99.88%
+ 113  RNA61     0.26%    passed     99.92%
+ 114  RNA19     0.26%    passed     99.80%
+ 115  RNA209    0.26%    passed     99.80%
+ 116  RNA44     0.26%    passed    100.00%
+ 117  RNA187    0.26%    passed     99.77%
+ 118  RNA54     0.26%    passed     99.97%
+ 119  RNA66     0.26%    passed     99.97%
+ 120  RNA132    0.26%    passed     99.97%
+ 121  RNA21     0.26%    passed     99.97%
+ 122  RNA87     0.26%    passed     99.97%
+ 123  RNA170    0.26%    passed     99.97%
+ 124  RNA176    0.26%    passed     99.97%
+ 125  RNA177    0.26%    passed     99.96%
+ 126  RNA119    0.26%    passed    100.00%
+ 127  RNA151    0.26%    passed     99.91%
+ 128  RNA152    0.26%    passed     99.91%
+ 129  RNA153    0.26%    passed     99.91%
+ 130  RNA155    0.26%    passed     99.91%
+ 131  RNA27     0.26%    passed     99.97%
+ 132  RNA33     0.26%    passed     99.97%
+ 133  RNA117    0.26%    passed     99.97%
+ 134  RNA186    0.26%    passed     99.97%
+ 135  RNA188    0.26%    passed     99.97%
+ 136  RNA29     0.26%    passed     99.97%
+ 137  RNA31     0.26%    passed     99.97%
+ 138  RNA32     0.26%    passed     99.97%
+ 139  RNA34     0.26%    passed     99.97%
+ 140  RNA35     0.26%    passed     99.97%
+ 141  RNA36     0.26%    passed     99.97%
+ 142  RNA55     0.26%    passed     99.97%
+ 143  RNA56     0.26%    passed     99.97%
+ 144  RNA57     0.26%    passed     99.97%
+ 145  RNA58     0.26%    passed     99.97%
+ 146  RNA59     0.26%    passed     99.97%
+ 147  RNA60     0.26%    passed     99.97%
+ 148  RNA63     0.26%    passed     99.97%
+ 149  RNA116    0.26%    passed     99.97%
+ 150  RNA118    0.26%    passed     99.97%
+ 151  RNA120    0.26%    passed     99.97%
+ 152  RNA190    0.26%    passed     99.97%
+ 153  RNA191    0.26%    passed     99.97%
+ 154  RNA154    0.26%    passed     99.93%
+ 155  RNA65     0.26%    passed     99.97%
+ 156  RNA43     0.26%    passed     99.96%
+ 157  RNA46     0.26%    passed     99.96%
+ 158  RNA48     0.26%    passed     99.96%
+ 159  RNA47     0.26%    passed    100.00%
+ 160  RNA45     0.26%    passed     99.92%
+ 161  RNA192    0.26%    passed     99.89%
+ 162  RNA200    0.26%    passed     99.89%
+ 163  RNA6      0.26%    passed     99.25%
+ 164  RNA10     0.26%    passed     98.67%
+ 165  RNA93     0.26%    passed     98.67%
+ 166  RNA92     0.26%    passed     99.52%
+ 167  RNA12     0.26%    passed     99.61%
+ 168  RNA4      0.26%    passed     99.25%
+ 169  RNA5      0.26%    passed     99.25%
+ 170  RNA11     0.26%    passed     99.25%
+ 171  RNA91     0.26%    passed     99.25%
+ 172  RNA94     0.26%    passed     99.25%
+ 173  RNA95     0.26%    passed     99.25%
+ 174  RNA96     0.26%    passed     99.25%
+ 175  RNA3      0.26%    passed     99.07%
+ 176  RNA9      0.26%    passed     99.07%
+ 177  RNA1      0.26%    passed     99.54%
+ 178  RNA7      0.26%    passed     99.54%
+ 179  RNA26     0.26%    passed     99.79%
+ 180  RNA62     0.26%    passed     99.93%
+ 181  RNA2      0.26%    passed     99.28%
+ 182  RNA8      0.26%    passed     99.28%
+ 183  RNA20     0.26%    passed     99.89%
+ 184  RNA223    0.32%    passed     99.53%
+ 185  RNA394    0.19%    passed    100.00%
+ 186  RNA357    0.26%    passed     99.69%
+ 187  RNA392    0.19%    passed     99.99%
+ 188  RNA324    0.19%    passed     99.98%
+ 189  RNA330    0.19%    passed     99.98%
+ 190  RNA336    0.19%    passed     99.98%
+ 191  RNA272    0.26%    passed     99.99%
+ 192  RNA233    0.26%    passed     99.96%
+ 193  RNA267    0.26%    passed     99.96%
+ 194  RNA269    0.26%    passed     99.96%
+ 195  RNA281    0.26%    passed     99.96%
+ 196  RNA363    0.26%    passed     99.96%
+ 197  RNA285    0.26%    passed     99.86%
+ 198  RNA280    0.26%    passed     99.88%
+ 199  RNA292    0.26%    passed     99.88%
+ 200  RNA360    0.26%    passed     99.88%
+ 201  RNA397    0.26%    passed     99.88%
+ 202  RNA282    0.26%    passed     99.69%
+ 203  RNA300    0.26%    passed     99.69%
+ 204  RNA388    0.26%    passed     99.69%
+ 205  RNA319    0.26%    passed     99.84%
+ 206  RNA314    0.26%    passed     99.96%
+ 207  RNA278    0.26%    passed     99.96%
+ 208  RNA386    0.26%    passed     99.84%
+ 209  RNA400    0.32%    passed     99.80%
+ 210  RNA315    0.19%    passed     99.92%
+ 211  RNA373    0.19%    passed     99.92%
+ 212  RNA379    0.19%    passed     99.92%
+ 213  RNA385    0.19%    passed     99.92%
+ 214  RNA339    0.19%    passed     99.95%
+ 215  RNA344    0.19%    passed     99.95%
+ 216  RNA257    0.19%    passed     99.74%
+ 217  RNA263    0.19%    passed     99.74%
+ 218  RNA369    0.19%    passed     99.74%
+ 219  RNA355    0.19%    passed     99.91%
+ 220  RNA367    0.19%    passed     99.91%
+ 221  RNA271    0.32%    passed     99.91%
+ 222  RNA231    0.19%    passed     99.97%
+ 223  RNA243    0.19%    passed     99.97%
+ 224  RNA351    0.19%    passed     99.92%
+ 225  RNA321    0.19%    passed     99.92%
+ 226  RNA327    0.19%    passed     99.92%
+ 227  RNA333    0.19%    passed     99.92%
+ 228  RNA37     0.19%    passed     99.98%
+ 229  RNA39     0.19%    passed     99.98%
+ 230  RNA40     0.19%    passed     99.98%
+ 231  RNA41     0.19%    passed     99.98%
+ 232  RNA42     0.19%    passed     99.98%
+ 233  RNA67     0.19%    passed     99.98%
+ 234  RNA72     0.19%    passed     99.98%
+ 235  RNA73     0.19%    passed     99.98%
+ 236  RNA76     0.19%    passed     99.98%
+ 237  RNA77     0.19%    passed     99.98%
+ 238  RNA78     0.19%    passed     99.98%
+ 239  RNA79     0.19%    passed     99.98%
+ 240  RNA82     0.19%    passed     99.98%
+ 241  RNA83     0.19%    passed     99.98%
+ 242  RNA84     0.19%    passed     99.98%
+ 243  RNA215    0.19%    passed     99.98%
+ 244  RNA217    0.19%    passed     99.98%
+ 245  RNA219    0.19%    passed     99.98%
+ 246  RNA220    0.19%    passed     99.98%
+ 247  RNA221    0.19%    passed     99.98%
+ 248  RNA224    0.19%    passed     99.98%
+ 249  RNA226    0.19%    passed     99.98%
+ 250  RNA229    0.19%    passed     99.98%
+ 251  RNA236    0.19%    passed     99.98%
+ 252  RNA245    0.19%    passed     99.98%
+ 253  RNA248    0.19%    passed     99.98%
+ 254  RNA255    0.19%    passed     99.98%
+ 255  RNA261    0.19%    passed     99.98%
+ 256  RNA268    0.19%    passed     99.98%
+ 257  RNA273    0.19%    passed     99.98%
+ 258  RNA274    0.19%    passed     99.98%
+ 259  RNA275    0.19%    passed     99.98%
+ 260  RNA276    0.19%    passed     99.98%
+ 261  RNA277    0.19%    passed     99.98%
+ 262  RNA279    0.19%    passed     99.98%
+ 263  RNA284    0.19%    passed     99.98%
+ 264  RNA286    0.19%    passed     99.98%
+ 265  RNA287    0.19%    passed     99.98%
+ 266  RNA290    0.19%    passed     99.98%
+ 267  RNA291    0.19%    passed     99.98%
+ 268  RNA293    0.19%    passed     99.98%
+ 269  RNA296    0.19%    passed     99.98%
+ 270  RNA298    0.19%    passed     99.98%
+ 271  RNA299    0.19%    passed     99.98%
+ 272  RNA302    0.19%    passed     99.98%
+ 273  RNA304    0.19%    passed     99.98%
+ 274  RNA305    0.19%    passed     99.98%
+ 275  RNA308    0.19%    passed     99.98%
+ 276  RNA316    0.19%    passed     99.98%
+ 277  RNA317    0.19%    passed     99.98%
+ 278  RNA320    0.19%    passed     99.98%
+ 279  RNA322    0.19%    passed     99.98%
+ 280  RNA323    0.19%    passed     99.98%
+ 281  RNA325    0.19%    passed     99.98%
+ 282  RNA326    0.19%    passed     99.98%
+ 283  RNA328    0.19%    passed     99.98%
+ 284  RNA329    0.19%    passed     99.98%
+ 285  RNA331    0.19%    passed     99.98%
+ 286  RNA332    0.19%    passed     99.98%
+ 287  RNA334    0.19%    passed     99.98%
+ 288  RNA335    0.19%    passed     99.98%
+ 289  RNA337    0.19%    passed     99.98%
+ 290  RNA338    0.19%    passed     99.98%
+ 291  RNA343    0.19%    passed     99.98%
+ 292  RNA348    0.19%    passed     99.98%
+ 293  RNA349    0.19%    passed     99.98%
+ 294  RNA350    0.19%    passed     99.98%
+ 295  RNA354    0.19%    passed     99.98%
+ 296  RNA362    0.19%    passed     99.98%
+ 297  RNA366    0.19%    passed     99.98%
+ 298  RNA374    0.19%    passed     99.98%
+ 299  RNA375    0.19%    passed     99.98%
+ 300  RNA378    0.19%    passed     99.98%
+ 301  RNA380    0.19%    passed     99.98%
+ 302  RNA381    0.19%    passed     99.98%
+ 303  RNA384    0.19%    passed     99.98%
+ 304  RNA387    0.19%    passed     99.98%
+ 305  RNA390    0.19%    passed     99.98%
+ 306  RNA391    0.19%    passed     99.98%
+ 307  RNA393    0.19%    passed     99.98%
+ 308  RNA395    0.19%    passed     99.98%
+ 309  RNA396    0.19%    passed     99.98%
+ 310  RNA222    0.19%    passed    100.00%
+ 311  RNA227    0.19%    passed    100.00%
+ 312  RNA289    0.19%    passed    100.00%
+ 313  RNA301    0.19%    passed    100.00%
+ 314  RNA307    0.19%    passed    100.00%
+ 315  RNA365    0.19%    passed    100.00%
+ 316  RNA218    0.19%    passed     99.93%
+ 317  RNA230    0.19%    passed     99.93%
+ 318  RNA297    0.19%    passed     99.93%
+ 319  RNA303    0.19%    passed     99.93%
+ 320  RNA361    0.19%    passed     99.93%
+ 321  RNA342    0.19%    passed     99.79%
+ 322  RNA347    0.19%    passed     99.79%
+ 323  RNA242    0.19%    passed     99.95%
+ 324  RNA254    0.19%    passed     99.95%
+ 325  RNA216    0.19%    passed     99.92%
+ 326  RNA38     0.19%    passed     99.92%
+ 327  RNA232    0.19%    passed     99.92%
+ 328  RNA244    0.19%    passed     99.92%
+ 329  RNA340    0.19%    passed     99.92%
+ 330  RNA345    0.19%    passed     99.92%
+ 331  RNA75     0.19%    passed     99.93%
+ 332  RNA68     0.19%    passed     99.91%
+ 333  RNA74     0.19%    passed     99.91%
+ 334  RNA80     0.19%    passed     99.91%
+ 335  RNA389    0.32%    passed     99.74%
+ 336  RNA240    0.26%    passed     99.84%
+ 337  RNA252    0.26%    passed     99.84%
+ 338  RNA310    0.19%    passed     99.91%
+ 339  RNA341    0.19%    passed     99.91%
+ 340  RNA346    0.19%    passed     99.91%
+ 341  RNA377    0.19%    passed     99.91%
+ 342  RNA383    0.19%    passed     99.91%
+ 343  RNA259    0.19%    passed     99.82%
+ 344  RNA265    0.19%    passed     99.82%
+ 345  RNA71     0.19%    passed     99.92%
+ 346  RNA97     0.19%    passed     99.92%
+ 347  RNA98     0.19%    passed     99.92%
+ 348  RNA100    0.19%    passed     99.92%
+ 349  RNA101    0.19%    passed     99.92%
+ 350  RNA102    0.19%    passed     99.92%
+ 351  RNA103    0.19%    passed     99.92%
+ 352  RNA104    0.19%    passed     99.92%
+ 353  RNA106    0.19%    passed     99.92%
+ 354  RNA107    0.19%    passed     99.92%
+ 355  RNA108    0.19%    passed     99.92%
+ 356  RNA235    0.19%    passed     99.92%
+ 357  RNA237    0.19%    passed     99.92%
+ 358  RNA241    0.19%    passed     99.92%
+ 359  RNA247    0.19%    passed     99.92%
+ 360  RNA249    0.19%    passed     99.92%
+ 361  RNA253    0.19%    passed     99.92%
+ 362  RNA256    0.19%    passed     99.92%
+ 363  RNA260    0.19%    passed     99.92%
+ 364  RNA262    0.19%    passed     99.92%
+ 365  RNA266    0.19%    passed     99.92%
+ 366  RNA283    0.19%    passed     99.92%
+ 367  RNA295    0.19%    passed     99.92%
+ 368  RNA356    0.19%    passed     99.92%
+ 369  RNA359    0.19%    passed     99.92%
+ 370  RNA368    0.19%    passed     99.92%
+ 371  RNA371    0.19%    passed     99.92%
+ 372  RNA372    0.19%    passed     99.92%
+ 373  RNA398    0.19%    passed     99.92%
+ 374  RNA399    0.19%    passed     99.92%
+ 375  RNA69     0.19%    passed     99.77%
+ 376  RNA81     0.19%    passed     99.77%
+ 377  RNA70     0.19%    passed     99.74%
+ 378  RNA228    0.19%    passed     99.74%
+ 379  RNA234    0.19%    passed     99.74%
+ 380  RNA246    0.19%    passed     99.74%
+ 381  RNA258    0.19%    passed     99.74%
+ 382  RNA264    0.19%    passed     99.74%
+ 383  RNA288    0.19%    passed     99.74%
+ 384  RNA294    0.19%    passed     99.74%
+ 385  RNA306    0.19%    passed     99.74%
+ 386  RNA318    0.19%    passed     99.74%
+ 387  RNA358    0.19%    passed     99.74%
+ 388  RNA364    0.19%    passed     99.74%
+ 389  RNA370    0.19%    passed     99.74%
+ 390  RNA376    0.19%    passed     99.74%
+ 391  RNA382    0.19%    passed     99.74%
+ 392  RNA239    0.19%    passed     99.98%
+ 393  RNA251    0.19%    passed     99.98%
+ 394  RNA99     0.19%    passed     99.82%
+ 395  RNA105    0.19%    passed     99.82%
+ 396  RNA270    0.26%    passed     99.95%
+ 397  RNA352    0.19%    passed     99.94%
+ 398  RNA238    0.19%    passed     99.74%
+ 399  RNA250    0.19%    passed     99.74%
+ 400  RNA353    0.19%    passed     99.92%
+****  TOTAL     0.22%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: RNA164 is identical to RNA15 but kept for subsequent analysis
+NOTE: RNA14 is identical to RNA13 but kept for subsequent analysis
+NOTE: RNA147 is identical to RNA146 but kept for subsequent analysis
+NOTE: RNA181 is identical to RNA180 but kept for subsequent analysis
+NOTE: RNA158 is identical to RNA156 but kept for subsequent analysis
+NOTE: RNA213 is identical to RNA23 but kept for subsequent analysis
+NOTE: RNA189 is identical to RNA28 but kept for subsequent analysis
+NOTE: RNA141 is identical to RNA123 but kept for subsequent analysis
+NOTE: RNA209 is identical to RNA19 but kept for subsequent analysis
+NOTE: RNA66 is identical to RNA54 but kept for subsequent analysis
+NOTE: RNA87 is identical to RNA21 but kept for subsequent analysis
+NOTE: RNA152 is identical to RNA151 but kept for subsequent analysis
+NOTE: RNA33 is identical to RNA27 but kept for subsequent analysis
+NOTE: RNA31 is identical to RNA29 but kept for subsequent analysis
+NOTE: RNA46 is identical to RNA43 but kept for subsequent analysis
+NOTE: RNA200 is identical to RNA192 but kept for subsequent analysis
+NOTE: RNA93 is identical to RNA10 but kept for subsequent analysis
+NOTE: RNA5 is identical to RNA4 but kept for subsequent analysis
+NOTE: RNA9 is identical to RNA3 but kept for subsequent analysis
+NOTE: RNA7 is identical to RNA1 but kept for subsequent analysis
+NOTE: RNA8 is identical to RNA2 but kept for subsequent analysis
+NOTE: RNA330 is identical to RNA324 but kept for subsequent analysis
+NOTE: RNA267 is identical to RNA233 but kept for subsequent analysis
+NOTE: RNA292 is identical to RNA280 but kept for subsequent analysis
+NOTE: RNA397 is identical to RNA360 but kept for subsequent analysis
+NOTE: RNA300 is identical to RNA282 but kept for subsequent analysis
+NOTE: RNA373 is identical to RNA315 but kept for subsequent analysis
+NOTE: RNA344 is identical to RNA339 but kept for subsequent analysis
+NOTE: RNA263 is identical to RNA257 but kept for subsequent analysis
+NOTE: RNA367 is identical to RNA355 but kept for subsequent analysis
+NOTE: RNA243 is identical to RNA231 but kept for subsequent analysis
+NOTE: RNA327 is identical to RNA321 but kept for subsequent analysis
+NOTE: RNA39 is identical to RNA37 but kept for subsequent analysis
+NOTE: RNA227 is identical to RNA222 but kept for subsequent analysis
+NOTE: RNA230 is identical to RNA218 but kept for subsequent analysis
+NOTE: RNA347 is identical to RNA342 but kept for subsequent analysis
+NOTE: RNA254 is identical to RNA242 but kept for subsequent analysis
+NOTE: RNA232 is identical to RNA38 but kept for subsequent analysis
+NOTE: RNA74 is identical to RNA68 but kept for subsequent analysis
+NOTE: RNA252 is identical to RNA240 but kept for subsequent analysis
+NOTE: RNA341 is identical to RNA310 but kept for subsequent analysis
+NOTE: RNA265 is identical to RNA259 but kept for subsequent analysis
+NOTE: RNA97 is identical to RNA71 but kept for subsequent analysis
+NOTE: RNA81 is identical to RNA69 but kept for subsequent analysis
+NOTE: RNA228 is identical to RNA70 but kept for subsequent analysis
+NOTE: RNA251 is identical to RNA239 but kept for subsequent analysis
+NOTE: RNA105 is identical to RNA99 but kept for subsequent analysis
+NOTE: RNA250 is identical to RNA238 but kept for subsequent analysis
+NOTE: 252 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: RNA16 (identical to RNA13) is ignored but added at the end
+NOTE: RNA18 (identical to RNA13) is ignored but added at the end
+NOTE: RNA162 (identical to RNA13) is ignored but added at the end
+NOTE: RNA163 (identical to RNA13) is ignored but added at the end
+NOTE: RNA167 (identical to RNA13) is ignored but added at the end
+NOTE: RNA148 (identical to RNA146) is ignored but added at the end
+NOTE: RNA149 (identical to RNA146) is ignored but added at the end
+NOTE: RNA150 (identical to RNA146) is ignored but added at the end
+NOTE: RNA183 (identical to RNA180) is ignored but added at the end
+NOTE: RNA185 (identical to RNA180) is ignored but added at the end
+NOTE: RNA159 (identical to RNA156) is ignored but added at the end
+NOTE: RNA160 (identical to RNA156) is ignored but added at the end
+NOTE: RNA161 (identical to RNA156) is ignored but added at the end
+NOTE: RNA22 (identical to RNA23) is ignored but added at the end
+NOTE: RNA24 (identical to RNA23) is ignored but added at the end
+NOTE: RNA49 (identical to RNA23) is ignored but added at the end
+NOTE: RNA50 (identical to RNA23) is ignored but added at the end
+NOTE: RNA51 (identical to RNA23) is ignored but added at the end
+NOTE: RNA52 (identical to RNA23) is ignored but added at the end
+NOTE: RNA53 (identical to RNA23) is ignored but added at the end
+NOTE: RNA64 (identical to RNA23) is ignored but added at the end
+NOTE: RNA85 (identical to RNA23) is ignored but added at the end
+NOTE: RNA86 (identical to RNA23) is ignored but added at the end
+NOTE: RNA88 (identical to RNA23) is ignored but added at the end
+NOTE: RNA89 (identical to RNA23) is ignored but added at the end
+NOTE: RNA90 (identical to RNA23) is ignored but added at the end
+NOTE: RNA109 (identical to RNA23) is ignored but added at the end
+NOTE: RNA110 (identical to RNA23) is ignored but added at the end
+NOTE: RNA111 (identical to RNA23) is ignored but added at the end
+NOTE: RNA112 (identical to RNA23) is ignored but added at the end
+NOTE: RNA113 (identical to RNA23) is ignored but added at the end
+NOTE: RNA114 (identical to RNA23) is ignored but added at the end
+NOTE: RNA121 (identical to RNA23) is ignored but added at the end
+NOTE: RNA122 (identical to RNA23) is ignored but added at the end
+NOTE: RNA124 (identical to RNA23) is ignored but added at the end
+NOTE: RNA125 (identical to RNA23) is ignored but added at the end
+NOTE: RNA126 (identical to RNA23) is ignored but added at the end
+NOTE: RNA127 (identical to RNA23) is ignored but added at the end
+NOTE: RNA128 (identical to RNA23) is ignored but added at the end
+NOTE: RNA129 (identical to RNA23) is ignored but added at the end
+NOTE: RNA130 (identical to RNA23) is ignored but added at the end
+NOTE: RNA131 (identical to RNA23) is ignored but added at the end
+NOTE: RNA133 (identical to RNA23) is ignored but added at the end
+NOTE: RNA134 (identical to RNA23) is ignored but added at the end
+NOTE: RNA136 (identical to RNA23) is ignored but added at the end
+NOTE: RNA137 (identical to RNA23) is ignored but added at the end
+NOTE: RNA138 (identical to RNA23) is ignored but added at the end
+NOTE: RNA139 (identical to RNA23) is ignored but added at the end
+NOTE: RNA140 (identical to RNA23) is ignored but added at the end
+NOTE: RNA142 (identical to RNA23) is ignored but added at the end
+NOTE: RNA143 (identical to RNA23) is ignored but added at the end
+NOTE: RNA144 (identical to RNA23) is ignored but added at the end
+NOTE: RNA169 (identical to RNA23) is ignored but added at the end
+NOTE: RNA171 (identical to RNA23) is ignored but added at the end
+NOTE: RNA172 (identical to RNA23) is ignored but added at the end
+NOTE: RNA173 (identical to RNA23) is ignored but added at the end
+NOTE: RNA174 (identical to RNA23) is ignored but added at the end
+NOTE: RNA175 (identical to RNA23) is ignored but added at the end
+NOTE: RNA178 (identical to RNA23) is ignored but added at the end
+NOTE: RNA179 (identical to RNA23) is ignored but added at the end
+NOTE: RNA193 (identical to RNA23) is ignored but added at the end
+NOTE: RNA194 (identical to RNA23) is ignored but added at the end
+NOTE: RNA195 (identical to RNA23) is ignored but added at the end
+NOTE: RNA196 (identical to RNA23) is ignored but added at the end
+NOTE: RNA197 (identical to RNA23) is ignored but added at the end
+NOTE: RNA198 (identical to RNA23) is ignored but added at the end
+NOTE: RNA199 (identical to RNA23) is ignored but added at the end
+NOTE: RNA201 (identical to RNA23) is ignored but added at the end
+NOTE: RNA202 (identical to RNA23) is ignored but added at the end
+NOTE: RNA203 (identical to RNA23) is ignored but added at the end
+NOTE: RNA204 (identical to RNA23) is ignored but added at the end
+NOTE: RNA205 (identical to RNA23) is ignored but added at the end
+NOTE: RNA206 (identical to RNA23) is ignored but added at the end
+NOTE: RNA207 (identical to RNA23) is ignored but added at the end
+NOTE: RNA208 (identical to RNA23) is ignored but added at the end
+NOTE: RNA210 (identical to RNA23) is ignored but added at the end
+NOTE: RNA212 (identical to RNA23) is ignored but added at the end
+NOTE: RNA214 (identical to RNA23) is ignored but added at the end
+NOTE: RNA132 (identical to RNA54) is ignored but added at the end
+NOTE: RNA170 (identical to RNA21) is ignored but added at the end
+NOTE: RNA176 (identical to RNA21) is ignored but added at the end
+NOTE: RNA153 (identical to RNA151) is ignored but added at the end
+NOTE: RNA155 (identical to RNA151) is ignored but added at the end
+NOTE: RNA117 (identical to RNA27) is ignored but added at the end
+NOTE: RNA186 (identical to RNA27) is ignored but added at the end
+NOTE: RNA188 (identical to RNA27) is ignored but added at the end
+NOTE: RNA32 (identical to RNA29) is ignored but added at the end
+NOTE: RNA34 (identical to RNA29) is ignored but added at the end
+NOTE: RNA35 (identical to RNA29) is ignored but added at the end
+NOTE: RNA36 (identical to RNA29) is ignored but added at the end
+NOTE: RNA55 (identical to RNA29) is ignored but added at the end
+NOTE: RNA56 (identical to RNA29) is ignored but added at the end
+NOTE: RNA57 (identical to RNA29) is ignored but added at the end
+NOTE: RNA58 (identical to RNA29) is ignored but added at the end
+NOTE: RNA59 (identical to RNA29) is ignored but added at the end
+NOTE: RNA60 (identical to RNA29) is ignored but added at the end
+NOTE: RNA63 (identical to RNA29) is ignored but added at the end
+NOTE: RNA116 (identical to RNA29) is ignored but added at the end
+NOTE: RNA118 (identical to RNA29) is ignored but added at the end
+NOTE: RNA120 (identical to RNA29) is ignored but added at the end
+NOTE: RNA190 (identical to RNA29) is ignored but added at the end
+NOTE: RNA191 (identical to RNA29) is ignored but added at the end
+NOTE: RNA48 (identical to RNA43) is ignored but added at the end
+NOTE: RNA11 (identical to RNA4) is ignored but added at the end
+NOTE: RNA91 (identical to RNA4) is ignored but added at the end
+NOTE: RNA94 (identical to RNA4) is ignored but added at the end
+NOTE: RNA95 (identical to RNA4) is ignored but added at the end
+NOTE: RNA96 (identical to RNA4) is ignored but added at the end
+NOTE: RNA336 (identical to RNA324) is ignored but added at the end
+NOTE: RNA269 (identical to RNA233) is ignored but added at the end
+NOTE: RNA281 (identical to RNA233) is ignored but added at the end
+NOTE: RNA363 (identical to RNA233) is ignored but added at the end
+NOTE: RNA388 (identical to RNA282) is ignored but added at the end
+NOTE: RNA379 (identical to RNA315) is ignored but added at the end
+NOTE: RNA385 (identical to RNA315) is ignored but added at the end
+NOTE: RNA369 (identical to RNA257) is ignored but added at the end
+NOTE: RNA333 (identical to RNA321) is ignored but added at the end
+NOTE: RNA40 (identical to RNA37) is ignored but added at the end
+NOTE: RNA41 (identical to RNA37) is ignored but added at the end
+NOTE: RNA42 (identical to RNA37) is ignored but added at the end
+NOTE: RNA67 (identical to RNA37) is ignored but added at the end
+NOTE: RNA72 (identical to RNA37) is ignored but added at the end
+NOTE: RNA73 (identical to RNA37) is ignored but added at the end
+NOTE: RNA76 (identical to RNA37) is ignored but added at the end
+NOTE: RNA77 (identical to RNA37) is ignored but added at the end
+NOTE: RNA78 (identical to RNA37) is ignored but added at the end
+NOTE: RNA79 (identical to RNA37) is ignored but added at the end
+NOTE: RNA82 (identical to RNA37) is ignored but added at the end
+NOTE: RNA83 (identical to RNA37) is ignored but added at the end
+NOTE: RNA84 (identical to RNA37) is ignored but added at the end
+NOTE: RNA215 (identical to RNA37) is ignored but added at the end
+NOTE: RNA217 (identical to RNA37) is ignored but added at the end
+NOTE: RNA219 (identical to RNA37) is ignored but added at the end
+NOTE: RNA220 (identical to RNA37) is ignored but added at the end
+NOTE: RNA221 (identical to RNA37) is ignored but added at the end
+NOTE: RNA224 (identical to RNA37) is ignored but added at the end
+NOTE: RNA226 (identical to RNA37) is ignored but added at the end
+NOTE: RNA229 (identical to RNA37) is ignored but added at the end
+NOTE: RNA236 (identical to RNA37) is ignored but added at the end
+NOTE: RNA245 (identical to RNA37) is ignored but added at the end
+NOTE: RNA248 (identical to RNA37) is ignored but added at the end
+NOTE: RNA255 (identical to RNA37) is ignored but added at the end
+NOTE: RNA261 (identical to RNA37) is ignored but added at the end
+NOTE: RNA268 (identical to RNA37) is ignored but added at the end
+NOTE: RNA273 (identical to RNA37) is ignored but added at the end
+NOTE: RNA274 (identical to RNA37) is ignored but added at the end
+NOTE: RNA275 (identical to RNA37) is ignored but added at the end
+NOTE: RNA276 (identical to RNA37) is ignored but added at the end
+NOTE: RNA277 (identical to RNA37) is ignored but added at the end
+NOTE: RNA279 (identical to RNA37) is ignored but added at the end
+NOTE: RNA284 (identical to RNA37) is ignored but added at the end
+NOTE: RNA286 (identical to RNA37) is ignored but added at the end
+NOTE: RNA287 (identical to RNA37) is ignored but added at the end
+NOTE: RNA290 (identical to RNA37) is ignored but added at the end
+NOTE: RNA291 (identical to RNA37) is ignored but added at the end
+NOTE: RNA293 (identical to RNA37) is ignored but added at the end
+NOTE: RNA296 (identical to RNA37) is ignored but added at the end
+NOTE: RNA298 (identical to RNA37) is ignored but added at the end
+NOTE: RNA299 (identical to RNA37) is ignored but added at the end
+NOTE: RNA302 (identical to RNA37) is ignored but added at the end
+NOTE: RNA304 (identical to RNA37) is ignored but added at the end
+NOTE: RNA305 (identical to RNA37) is ignored but added at the end
+NOTE: RNA308 (identical to RNA37) is ignored but added at the end
+NOTE: RNA316 (identical to RNA37) is ignored but added at the end
+NOTE: RNA317 (identical to RNA37) is ignored but added at the end
+NOTE: RNA320 (identical to RNA37) is ignored but added at the end
+NOTE: RNA322 (identical to RNA37) is ignored but added at the end
+NOTE: RNA323 (identical to RNA37) is ignored but added at the end
+NOTE: RNA325 (identical to RNA37) is ignored but added at the end
+NOTE: RNA326 (identical to RNA37) is ignored but added at the end
+NOTE: RNA328 (identical to RNA37) is ignored but added at the end
+NOTE: RNA329 (identical to RNA37) is ignored but added at the end
+NOTE: RNA331 (identical to RNA37) is ignored but added at the end
+NOTE: RNA332 (identical to RNA37) is ignored but added at the end
+NOTE: RNA334 (identical to RNA37) is ignored but added at the end
+NOTE: RNA335 (identical to RNA37) is ignored but added at the end
+NOTE: RNA337 (identical to RNA37) is ignored but added at the end
+NOTE: RNA338 (identical to RNA37) is ignored but added at the end
+NOTE: RNA343 (identical to RNA37) is ignored but added at the end
+NOTE: RNA348 (identical to RNA37) is ignored but added at the end
+NOTE: RNA349 (identical to RNA37) is ignored but added at the end
+NOTE: RNA350 (identical to RNA37) is ignored but added at the end
+NOTE: RNA354 (identical to RNA37) is ignored but added at the end
+NOTE: RNA362 (identical to RNA37) is ignored but added at the end
+NOTE: RNA366 (identical to RNA37) is ignored but added at the end
+NOTE: RNA374 (identical to RNA37) is ignored but added at the end
+NOTE: RNA375 (identical to RNA37) is ignored but added at the end
+NOTE: RNA378 (identical to RNA37) is ignored but added at the end
+NOTE: RNA380 (identical to RNA37) is ignored but added at the end
+NOTE: RNA381 (identical to RNA37) is ignored but added at the end
+NOTE: RNA384 (identical to RNA37) is ignored but added at the end
+NOTE: RNA387 (identical to RNA37) is ignored but added at the end
+NOTE: RNA390 (identical to RNA37) is ignored but added at the end
+NOTE: RNA391 (identical to RNA37) is ignored but added at the end
+NOTE: RNA393 (identical to RNA37) is ignored but added at the end
+NOTE: RNA395 (identical to RNA37) is ignored but added at the end
+NOTE: RNA396 (identical to RNA37) is ignored but added at the end
+NOTE: RNA289 (identical to RNA222) is ignored but added at the end
+NOTE: RNA301 (identical to RNA222) is ignored but added at the end
+NOTE: RNA307 (identical to RNA222) is ignored but added at the end
+NOTE: RNA365 (identical to RNA222) is ignored but added at the end
+NOTE: RNA297 (identical to RNA218) is ignored but added at the end
+NOTE: RNA303 (identical to RNA218) is ignored but added at the end
+NOTE: RNA361 (identical to RNA218) is ignored but added at the end
+NOTE: RNA244 (identical to RNA38) is ignored but added at the end
+NOTE: RNA340 (identical to RNA38) is ignored but added at the end
+NOTE: RNA345 (identical to RNA38) is ignored but added at the end
+NOTE: RNA80 (identical to RNA68) is ignored but added at the end
+NOTE: RNA346 (identical to RNA310) is ignored but added at the end
+NOTE: RNA377 (identical to RNA310) is ignored but added at the end
+NOTE: RNA383 (identical to RNA310) is ignored but added at the end
+NOTE: RNA98 (identical to RNA71) is ignored but added at the end
+NOTE: RNA100 (identical to RNA71) is ignored but added at the end
+NOTE: RNA101 (identical to RNA71) is ignored but added at the end
+NOTE: RNA102 (identical to RNA71) is ignored but added at the end
+NOTE: RNA103 (identical to RNA71) is ignored but added at the end
+NOTE: RNA104 (identical to RNA71) is ignored but added at the end
+NOTE: RNA106 (identical to RNA71) is ignored but added at the end
+NOTE: RNA107 (identical to RNA71) is ignored but added at the end
+NOTE: RNA108 (identical to RNA71) is ignored but added at the end
+NOTE: RNA235 (identical to RNA71) is ignored but added at the end
+NOTE: RNA237 (identical to RNA71) is ignored but added at the end
+NOTE: RNA241 (identical to RNA71) is ignored but added at the end
+NOTE: RNA247 (identical to RNA71) is ignored but added at the end
+NOTE: RNA249 (identical to RNA71) is ignored but added at the end
+NOTE: RNA253 (identical to RNA71) is ignored but added at the end
+NOTE: RNA256 (identical to RNA71) is ignored but added at the end
+NOTE: RNA260 (identical to RNA71) is ignored but added at the end
+NOTE: RNA262 (identical to RNA71) is ignored but added at the end
+NOTE: RNA266 (identical to RNA71) is ignored but added at the end
+NOTE: RNA283 (identical to RNA71) is ignored but added at the end
+NOTE: RNA295 (identical to RNA71) is ignored but added at the end
+NOTE: RNA356 (identical to RNA71) is ignored but added at the end
+NOTE: RNA359 (identical to RNA71) is ignored but added at the end
+NOTE: RNA368 (identical to RNA71) is ignored but added at the end
+NOTE: RNA371 (identical to RNA71) is ignored but added at the end
+NOTE: RNA372 (identical to RNA71) is ignored but added at the end
+NOTE: RNA398 (identical to RNA71) is ignored but added at the end
+NOTE: RNA399 (identical to RNA71) is ignored but added at the end
+NOTE: RNA234 (identical to RNA70) is ignored but added at the end
+NOTE: RNA246 (identical to RNA70) is ignored but added at the end
+NOTE: RNA258 (identical to RNA70) is ignored but added at the end
+NOTE: RNA264 (identical to RNA70) is ignored but added at the end
+NOTE: RNA288 (identical to RNA70) is ignored but added at the end
+NOTE: RNA294 (identical to RNA70) is ignored but added at the end
+NOTE: RNA306 (identical to RNA70) is ignored but added at the end
+NOTE: RNA318 (identical to RNA70) is ignored but added at the end
+NOTE: RNA358 (identical to RNA70) is ignored but added at the end
+NOTE: RNA364 (identical to RNA70) is ignored but added at the end
+NOTE: RNA370 (identical to RNA70) is ignored but added at the end
+NOTE: RNA376 (identical to RNA70) is ignored but added at the end
+NOTE: RNA382 (identical to RNA70) is ignored but added at the end
+Alignment was printed to iqtree_results\rrna_code.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to iqtree_results\rrna_code.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.009 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -3442.512
+2. Current log-likelihood: -3440.717
+3. Current log-likelihood: -3439.480
+Optimal log-likelihood: -3439.228
+Rate parameters:  A-C: 1.41208  A-G: 8.80831  A-T: 3.55937  C-G: 0.00010  C-T: 25.43629  G-T: 1.00000
+Warning! Some parameters hit the boundaries
+Base frequencies:  A: 0.267  C: 0.220  G: 0.292  T: 0.221
+Proportion of invariable sites: 0.481
+Gamma shape alpha: 0.125
+Parameters optimization took 3 rounds (0.115 sec)
+Time for fast ML tree search: 0.346 seconds
+
+NOTE: ModelFinder requires 2 MB RAM!
+ModelFinder will test up to 88 DNA models (sample size: 1555 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         3535.953     301 7673.905     7819.000     9284.024
+  2  GTR+F+I       3438.451     302 7480.903     7627.079     9096.371
+  3  GTR+F+G4      3454.997     302 7513.995     7660.170     9129.462
+  4  GTR+F+I+G4    3437.401     303 7480.801     7628.063     9101.618
+  6  SYM+I         3450.043     299 7498.086     7641.035     9097.506
+  8  SYM+I+G4      3448.931     300 7497.862     7641.881     9102.631
+ 10  TVM+F+I       3449.783     301 7501.567     7646.662     9111.685
+ 12  TVM+F+I+G4    3445.976     302 7495.953     7642.128     9111.420
+ 14  TVMe+I        3455.237     298 7506.474     7648.357     9100.545
+ 16  TVMe+I+G4     3452.219     299 7502.438     7645.386     9101.858
+ 18  TIM3+F+I      3442.657     300 7485.313     7629.333     9090.083
+ 20  TIM3+F+I+G4   3439.243     301 7480.485     7625.580     9090.604
+ 22  TIM3e+I       3453.952     297 7501.904     7642.725     9090.625
+ 24  TIM3e+I+G4    3450.511     298 7497.023     7638.905     9091.094
+ 26  TIM2+F+I      3445.820     300 7491.639     7635.658     9096.409
+ 28  TIM2+F+I+G4   3442.402     301 7486.804     7631.899     9096.923
+ 30  TIM2e+I       3457.417     297 7508.834     7649.655     9097.556
+ 32  TIM2e+I+G4    3453.974     298 7503.949     7645.831     9098.019
+ 34  TIM+F+I       3447.396     300 7494.792     7638.811     9099.561
+ 36  TIM+F+I+G4    3443.768     301 7489.535     7634.630     9099.654
+ 38  TIMe+I        3458.682     297 7511.364     7652.185     9100.085
+ 40  TIMe+I+G4     3455.034     298 7506.069     7647.951     9100.140
+ 42  TPM3u+F+I     3454.126     299 7506.252     7649.200     9105.672
+ 44  TPM3u+F+I+G4  3449.970     300 7499.941     7643.960     9104.710
+ 46  TPM3+I        3460.003     296 7512.007     7651.771     9095.379
+ 48  TPM3+I+G4     3455.906     297 7505.812     7646.633     9094.534
+ 50  TPM2u+F+I     3457.264     299 7512.527     7655.475     9111.947
+ 52  TPM2u+F+I+G4  3452.977     300 7505.955     7649.974     9110.724
+ 54  TPM2+I        3463.473     296 7518.946     7658.711     9102.318
+ 56  TPM2+I+G4     3459.312     297 7512.625     7653.446     9101.346
+ 58  K3Pu+F+I      3458.709     299 7515.417     7658.366     9114.837
+ 60  K3Pu+F+I+G4   3454.137     300 7508.275     7652.294     9113.044
+ 62  K3P+I         3464.618     296 7521.237     7661.002     9104.609
+ 64  K3P+I+G4      3460.177     297 7514.355     7655.176     9103.076
+ 66  TN+F+I        3448.027     299 7494.053     7637.001     9093.473
+ 68  TN+F+I+G4     3443.583     300 7487.166     7631.185     9091.936
+ 70  TNe+I         3459.332     296 7510.664     7650.429     9094.036
+ 72  TNe+I+G4      3454.867     297 7503.735     7644.556     9092.456
+ 74  HKY+F+I       3459.351     298 7514.702     7656.584     9108.773
+ 76  HKY+F+I+G4    3454.351     299 7506.702     7649.651     9106.122
+ 78  K2P+I         3465.267     295 7520.534     7659.247     9098.557
+ 80  K2P+I+G4      3460.436     296 7512.873     7652.637     9096.245
+ 82  F81+F+I       3551.125     297 7696.249     7837.070     9284.971
+ 84  F81+F+I+G4    3546.506     298 7689.013     7830.895     9283.083
+ 86  JC+I          3557.694     294 7703.388     7841.054     9276.061
+ 88  JC+I+G4       3552.862     295 7695.725     7834.438     9273.748
+Akaike Information Criterion:           TIM3+F+I+G4
+Corrected Akaike Information Criterion: TIM3+F+I+G4
+Bayesian Information Criterion:         TIM3+F+I
+Best-fit model: TIM3+F+I chosen according to BIC
+
+All model information printed to iqtree_results\rrna_code.model.gz
+CPU time for ModelFinder: 2.594 seconds (0h:0m:2s)
+Wall-clock time for ModelFinder: 2.894 seconds (0h:0m:2s)
+Generating 1000 samples for ultrafast bootstrap (seed: 384001)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -3551.241
+2. Current log-likelihood: -3477.413
+3. Current log-likelihood: -3444.150
+4. Current log-likelihood: -3442.658
+Optimal log-likelihood: -3442.656
+Rate parameters:  A-C: 0.24586  A-G: 3.52737  A-T: 1.00000  C-G: 0.24586  C-T: 9.24436  G-T: 1.00000
+Base frequencies:  A: 0.267  C: 0.220  G: 0.292  T: 0.221
+Proportion of invariable sites: 0.873
+Parameters optimization took 4 rounds (0.077 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0290722 secs using 53.75% CPU
+Computing ML distances took 0.039336 sec (of wall-clock time) 0.015625 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.0004068 secs
+Computing RapidNJ tree took 0.005106 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -3438.121
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.712 second
+Computing log-likelihood of 98 initial trees ... 0.376 seconds
+Current best score: -3434.053
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -3433.880
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -3432.275
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -3431.584
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 10: -3430.104
+Iteration 10 / LogL: -3430.104 / Time: 0h:0m:6s
+Iteration 20 / LogL: -3437.590 / Time: 0h:0m:8s
+Finish initializing candidate tree set (20)
+Current best tree score: -3430.104 / CPU time: 5.165
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -3432.236 / Time: 0h:0m:10s (0h:0m:20s left)
+Iteration 40 / LogL: -3431.098 / Time: 0h:0m:12s (0h:0m:16s left)
+Iteration 50 / LogL: -3441.325 / Time: 0h:0m:14s (0h:0m:13s left)
+Log-likelihood cutoff on original alignment: -3467.897
+Iteration 60 / LogL: -3430.193 / Time: 0h:0m:16s (0h:0m:11s left)
+Iteration 70 / LogL: -3437.484 / Time: 0h:0m:18s (0h:0m:9s left)
+Iteration 80 / LogL: -3430.167 / Time: 0h:0m:21s (0h:0m:6s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 85: -3429.322
+Iteration 90 / LogL: -3431.760 / Time: 0h:0m:23s (0h:0m:21s left)
+Iteration 100 / LogL: -3429.376 / Time: 0h:0m:25s (0h:0m:19s left)
+Log-likelihood cutoff on original alignment: -3467.897
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.994
+Iteration 110 / LogL: -3444.406 / Time: 0h:0m:28s (0h:0m:20s left)
+Iteration 120 / LogL: -3528.455 / Time: 0h:0m:30s (0h:0m:18s left)
+Iteration 130 / LogL: -3429.349 / Time: 0h:0m:32s (0h:0m:16s left)
+Iteration 140 / LogL: -3429.353 / Time: 0h:0m:34s (0h:0m:13s left)
+Iteration 150 / LogL: -3434.292 / Time: 0h:0m:36s (0h:0m:11s left)
+Log-likelihood cutoff on original alignment: -3467.897
+Iteration 160 / LogL: -3429.349 / Time: 0h:0m:39s (0h:0m:9s left)
+Iteration 170 / LogL: -3429.366 / Time: 0h:0m:41s (0h:0m:6s left)
+Iteration 180 / LogL: -3434.282 / Time: 0h:0m:43s (0h:0m:4s left)
+TREE SEARCH COMPLETED AFTER 186 ITERATIONS / Time: 0h:0m:45s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -3429.322
+Optimal log-likelihood: -3429.322
+Rate parameters:  A-C: 0.20538  A-G: 3.36573  A-T: 1.00000  C-G: 0.20538  C-T: 9.35710  G-T: 1.00000
+Base frequencies:  A: 0.267  C: 0.220  G: 0.292  T: 0.221
+Proportion of invariable sites: 0.872
+Parameters optimization took 1 rounds (0.016 sec)
+BEST SCORE FOUND : -3429.322
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqtree_results\rrna_code.splits.nex
+Total tree length: 0.131
+
+Total number of iterations: 186
+CPU time used for tree search: 42.297 sec (0h:0m:42s)
+Wall-clock time used for tree search: 42.190 sec (0h:0m:42s)
+Total CPU time used: 45.516 sec (0h:0m:45s)
+Total wall-clock time used: 45.803 sec (0h:0m:45s)
+
+Computing bootstrap consensus tree...
+Reading input file iqtree_results\rrna_code.splits.nex...
+148 taxa and 3440 splits.
+Consensus tree written to iqtree_results\rrna_code.contree
+Reading input trees file iqtree_results\rrna_code.contree
+Log-likelihood of consensus tree: -3430.532
+
+Analysis results written to: 
+  IQ-TREE report:                iqtree_results\rrna_code.iqtree
+  Maximum-likelihood tree:       iqtree_results\rrna_code.treefile
+  Likelihood distances:          iqtree_results\rrna_code.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqtree_results\rrna_code.splits.nex
+  Consensus tree:                iqtree_results\rrna_code.contree
+  Screen log file:               iqtree_results\rrna_code.log
+
+Date and Time: Sun May 24 13:54:30 2026
